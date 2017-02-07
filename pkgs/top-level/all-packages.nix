@@ -2495,6 +2495,8 @@ with pkgs;
   minisign = callPackage ../tools/security/minisign { };
 
   mmv = callPackage ../tools/misc/mmv { };
+  
+  moonbridge = callPackage ../servers/moonbridge { };
 
   morituri = callPackage ../applications/audio/morituri { };
 
