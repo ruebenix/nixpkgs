@@ -1032,6 +1032,8 @@ with pkgs;
     withPulseAudio = config.pulseaudio or true;
   };
 
+  bmake = callPackage ../development/tools/misc/bmake { };
+
   bmrsa = callPackage ../tools/security/bmrsa/11.nix { };
 
   bogofilter = callPackage ../tools/misc/bogofilter { };

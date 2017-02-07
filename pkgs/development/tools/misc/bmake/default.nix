@@ -1,4 +1,4 @@
-{ stdenv, fetchurl}:
+{ stdenv, fetchurl, lib, copyPathsToStore, m4, perl, getopt}:
 
 stdenv.mkDerivation rec {
   version = "20170114";
@@ -6,10 +6,14 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "http://www.crufty.net/ftp/pub/sjg/${name}.tar.gz";
-    sha256 = "113nlmidxy9kjr45kg9x3ngar4951mvag1js2a3j8nxcz34wxsv4";
+    sha256 = "054ws5ljfjjancsa97x41h65la5jxr30l2xp3z0a4qdcjzg04ak4";
   };
 
+  buildInputs = [
+  perl m4 getopt 
+  ];
 
+  patches =  copyPathsToStore (lib.readPathsFromFile ./. ./series) ;
 
   meta = {
     homepage = "http://www.crufty.net/help/sjg/bmake.html";
