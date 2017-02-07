@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, lua5, libbsd, bmake }:
+{ stdenv, fetchurl, bsdbuild, lua5, bmake }:
 
 stdenv.mkDerivation rec {
   version  ="1.0.1";
@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [
-   lua5 libbsd 
+   lua5 bsdbuild bmake 
   ];
 
   buildPhase =''
