@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, lua5 }:
+{ stdenv, fetchurl, lua5, libbsd }:
 
 stdenv.mkDerivation rec {
   version  ="1.0.1";
@@ -10,8 +10,12 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [
-   lua5 pmake 
+   lua5 libbsd 
   ];
+
+  buildPhase =''
+   pmake 
+  '';
 
   configureFlags = [
   ];
