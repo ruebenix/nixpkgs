@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -222,4 +222,4 @@ install-mk:
+ 
+ # A simple unit-test driver to help catch regressions
+ accept test:
+-	cd ${.CURDIR}/unit-tests && MAKEFLAGS= ${.MAKE} -r -m / TEST_MAKE=${TEST_MAKE:U${.OBJDIR}/${PROG:T}} ${.TARGET}
++#	cd ${.CURDIR}/unit-tests && MAKEFLAGS= ${.MAKE} -r -m / TEST_MAKE=${TEST_MAKE:U${.OBJDIR}/${PROG:T}} ${.TARGET}
+-- 
+2.10.0
+
