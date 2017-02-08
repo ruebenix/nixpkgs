@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, bsdbuild, lua5, bmake }:
+{ stdenv, fetchurl, bsdbuild, lua5, bmake, libbsd }:
 
 stdenv.mkDerivation rec {
   version  ="1.0.1";
@@ -16,9 +16,6 @@ stdenv.mkDerivation rec {
   buildPhase =''
    bmake 
   '';
-
-  configureFlags = [
-  ];
 
   meta = with stdenv.lib; {
     description = "Moonbridge is a stand-alone TCP/IP (and HTTP) network server for applications that are written in the Lua programming language.";
