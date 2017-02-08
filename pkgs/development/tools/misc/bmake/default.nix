@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   meta = {
     homepage = "http://www.crufty.net/help/sjg/bmake.html";
     description = "autoconf version of NetBSDs make";
-    license = stdenv.lib.licenses.gpl2Plus;
+    license = stdenv.lib.licenses.bsd3;
 
     platforms = stdenv.lib.platforms.all;
   };
