@@ -12,8 +12,11 @@ stdenv.mkDerivation rec {
   buildInputs = [
   perl m4 getopt 
   ];
+  
+  configureFlags = [ "--with-default-sys-path=$out/share/mk" ];
 
   patches =  copyPathsToStore (lib.readPathsFromFile ./. ./series) ;
+
 
   meta = {
     homepage = "http://www.crufty.net/help/sjg/bmake.html";
