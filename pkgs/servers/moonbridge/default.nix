@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, bsdbuild, lua5, bmake, libbsd }:
+{ stdenv, fetchurl, lua5, bmake, libbsd }:
 
 stdenv.mkDerivation rec {
   version  ="1.0.1";
@@ -10,11 +10,17 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [
-   lua5 bsdbuild bmake 
+   lua5 bmake libbsd 
   ];
 
-  buildPhase =''
-   bmake 
+  preBuild = ''
+  mv Makefile bMakefile
+  '';
+  postBuild = "bmake -f bMakefile" ;
+
+  installPhase = ''
+   mkdir -p $out/bin
+   cp moonbridge $out/bin/moonbridge
   '';
 
   meta = with stdenv.lib; {
