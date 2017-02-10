@@ -361,6 +361,7 @@
   paholg = "Paho Lurie-Gregg <paho@paholg.com>";
   pakhfn = "Fedor Pakhomov <pakhfn@gmail.com>";
   palo = "Ingolf Wanger <palipalo9@googlemail.com>";
+  paperdigits = "Mica Semrick <mica@silentumbrella.com>";
   pashev = "Igor Pashev <pashev.igor@gmail.com>";
   pawelpacana = "Paweł Pacana <pawel.pacana@gmail.com>";
   periklis = "theopompos@gmail.com";
@@ -461,6 +462,7 @@
   SShrike = "Severen Redwood <severen@shrike.me>";
   stephenmw = "Stephen Weinberg <stephen@q5comm.com>";
   sternenseemann = "Lukas Epple <post@lukasepple.de>";
+  stesie = "Stefan Siegl <stesie@brokenpipe.de>";
   steveej = "Stefan Junker <mail@stefanjunker.de>";
   swarren83 = "Shawn Warren <shawn.w.warren@gmail.com>";
   swistak35 = "Rafał Łasocha <me@swistak35.com>";
