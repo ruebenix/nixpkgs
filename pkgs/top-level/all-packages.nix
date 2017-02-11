@@ -4443,6 +4443,8 @@ with pkgs;
 
   webalizer = callPackage ../tools/networking/webalizer { };
 
+  webmcp = callPackage ../development/web/webmcp { };
+
   weighttp = callPackage ../tools/networking/weighttp { };
 
   wget = callPackage ../tools/networking/wget {
