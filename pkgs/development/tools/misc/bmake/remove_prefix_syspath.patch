@@ -1,0 +1,10 @@
+--- a/pathnames.h
++++ b/pathnames.h
+53,59d52
+< #ifndef _PATH_DEFSYSPATH
+< # ifdef _PATH_PREFIX_SYSPATH
+< #   define  _PATH_DEFSYSPATH	_PATH_PREFIX_SYSPATH ":" _path_defsyspath
+< # else
+< #   define  _PATH_DEFSYSPATH	_path_defsyspath
+< # endif
+< #endif

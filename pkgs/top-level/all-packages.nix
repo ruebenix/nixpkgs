@@ -1036,6 +1036,8 @@ with pkgs;
     withPulseAudio = config.pulseaudio or true;
   };
 
+  bmake = callPackage ../development/tools/misc/bmake { };
+
   bmrsa = callPackage ../tools/security/bmrsa/11.nix { };
 
   bogofilter = callPackage ../tools/misc/bogofilter { };
@@ -2499,6 +2501,8 @@ with pkgs;
   minisign = callPackage ../tools/security/minisign { };
 
   mmv = callPackage ../tools/misc/mmv { };
+  
+  moonbridge = callPackage ../servers/moonbridge { };
 
   morituri = callPackage ../applications/audio/morituri { };
 
