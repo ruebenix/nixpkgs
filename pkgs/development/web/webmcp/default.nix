@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, lua5}:
+{ stdenv, fetchurl, lua5, postgresql}:
 
 stdenv.mkDerivation rec {
   version  ="2.1.0";
@@ -6,21 +6,16 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "http://www.public-software-group.org/pub/projects/webmcp/v${version}/webmcp-v${version}.tar.gz";
-    sha256 = "0h72f4nd9abqijk70j2ip61swc0x817w4xhbn6w95v8jkp95jn1b";
+    sha256 = "098myg9a43djjrmsvz64as4fiwialfg6zi3b2yxaqfadficgpyhj";
   };
 
   buildInputs = [
-   lua5 
+   lua5 postgresql
   ];
-
-  preBuild = ''
-  mv Makefile bMakefile
-  '';
-  postBuild = "bmake -f bMakefile" ;
 
   installPhase = ''
    mkdir -p $out/bin
-   cp moonbridge $out/bin/moonbridge
+   cp -RL framework/* $out/
   '';
 
   meta = with stdenv.lib; {
