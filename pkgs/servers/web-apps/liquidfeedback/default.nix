@@ -32,18 +32,19 @@ stdenv.mkDerivation rec {
   preBuild = ''
      cd ${sourceRoot}/liquid_feedback_core-v${version}
      make
+     cd ${sourceRoot}/..
   '';
 
   installPhase = ''
-	mkdir -p $out/core/sql
-	mkdir -p $out/core/bin
-	cp $sourceRoot/liquid_feedback_core-v${version}/core.sql $out/core/sql/
+	  mkdir -p $out/core/sql
+	  mkdir -p $out/core/bin
+	  cp $sourceRoot/liquid_feedback_core-v${version}/core.sql $out/core/sql/
     cp $sourceRoot/liquid_feedback_core-v${version}/lf_update $out/core/bin
     cp $sourceRoot/liquid_feedback_core-v${version}/lf_update_issue_order $out/core/bin
     cp $sourceRoot/liquid_feedback_core-v${version}/lf_update_suggestion_order $out/core/bin/
 
     mkdir -p $out/frontend
-    cp -r $out/liquid_feedback_frontend-v${frontendversion} $out/frontend/    
+    cp -r $sourceRoot/liquid_feedback_frontend-v${frontendversion} $out/frontend/  
 
   '';
 
