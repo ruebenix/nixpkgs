@@ -1473,6 +1473,8 @@ with pkgs;
 
   crackxls = callPackage ../tools/security/crackxls { };
 
+  crackpkcs12 = callPackage ../tools/security/crackpkcs12 { };
+
   createrepo_c = callPackage ../tools/package-management/createrepo_c { };
 
   cromfs = callPackage ../tools/archivers/cromfs { };
